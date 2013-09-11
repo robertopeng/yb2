@@ -1,0 +1,39 @@
+yb:Array
+(
+    [addimg_type] => jpg|png|jpge|bmp
+    [addimg_upsize] => 2097152
+    [guestMode] => 0
+    [hotuser_switch] => 1
+    [invite_count] => 5
+    [invite_expiration] => 10
+    [invite_switch] => 0
+    [keep_domain] => www,yunbian,bbs,music,map,index,register,login,tag,now,admin,recommend,discovery,myfollow,mypost,mylikes,myreplays,mynotices,edit,logout,home,gomember,location,showinfo,about,copyright,call,service,privacy,custom,read,pm,user,site
+    [keep_email] => admin,yunbian
+    [keep_niname] => yunbian,admin,administrator,master,webmaster,email,username,password
+    [keep_rep] => 操你妈,艹你妈
+    [loginCodeSwitch] => 1
+    [recomm_switch] => 0
+    [regCodeSwitch] => 1
+    [show_ajax_to] => 4
+    [show_page_mode] => 0
+    [show_page_num] => 10
+    [site_count] => 
+    [site_desc] => 又一个云边轻博客系统诞生
+    [site_keyword] => 云边,yunbian,PHP,MYSQL,轻博客,开源,轻博,qing,开源轻博,开源轻博客
+    [site_title] => 云边轻博客
+    [site_titlepre] => 又一个云边轻博客
+    [theme_upload] => 1
+    [theme_uploadsize] => 1048576
+    [theme_uploadtype] => jpg,png,gif
+    [wizard_switch] => 0
+    [version] => 2.0 RC
+    [soft] => 云边轻博
+    [url] => http://qing.thinksaas.cn
+    [email] => nxfte@qq.com
+    [copyright] => GNU GPL
+    [year] => 2011 - 2013
+    [author] => anythink
+    [code] => anythink &lt;anythink.wx@gmail.com&gt; 
+    [design] => LDuo &lt;liuduo-i3@163.com&gt;
+)
+/n
