@@ -312,8 +312,14 @@ class user extends top
 		if(islogin()){
 			$data['notic'] = spClass('db_notice')->findCount(array('foruid'=>$this->uid,'isread'=>0));
 			$data['pm']    = spCLass('db_pm')->findCount(array('touid'=>$this->uid,'isnew'=>1));
+			$data['invite_comment']    = spCLass('db_invite_comment')->findCount(array('touid'=>$this->uid,'isnew'=>1));
+
+			$file1 = print_r($this->uid ,TRUE);
+			$file2 = print_r($data['invite_comment'] ,TRUE);
+			$fileno = file_put_contents(APP_PATH."/test.txt",$file1.' '.$file2);
+
 		}else{
-			$data['notic'] = $data['pm'] = 0;
+			$data['notic'] = $data['pm'] = $data['invite_comment'] = 0;
 		}
 		$this->api_success($data);
 	}

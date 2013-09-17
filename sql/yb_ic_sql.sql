@@ -2,7 +2,8 @@
 SQLyog Enterprise v10.42 
 MySQL - 5.5.32 : Database - yunbian
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -25,7 +26,6 @@ CREATE TABLE `th_invite_comment` (
   `uid` int(10) unsigned NOT NULL,
   `touid` int(10) NOT NULL,
   `isnew` tinyint(1) unsigned NOT NULL,
-  `num` int(10) unsigned NOT NULL,
   `title` varchar(255) NOT NULL,
   `url` varchar(255) NOT NULL,
   `status` int(10) NOT NULL,

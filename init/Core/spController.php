@@ -178,15 +178,11 @@ class spController {
  */
 
 class spArgs {
-	/**
-	 * 在内存中保存的变量
-	 */
-	private $args = null;
 
-	/**
-	 * 构造函数
-	 *
-	 */
+	// 在内存中保存的变量
+	private $args = null;
+	
+	// 构造函数	
 	public function __construct(){
 		$this->args = $_REQUEST;
 	}

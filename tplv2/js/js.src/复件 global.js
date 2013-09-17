@@ -873,6 +873,11 @@ function now_notice(){
 			}else{
 				$('#now_pm').hide();
 			}
+            if(data.body.invite_comment != 0){
+                $('#now_invite_comment').html('<div class="pop">'+data.body.invite_comment+'</div>');
+            }else{
+                $('#now_invite_comment').hide();
+            }
 		}
 	});
 }

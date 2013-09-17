@@ -119,6 +119,9 @@ class userblog extends top
 		$skin = spClass('db_theme')->find(array('uid'=>$rs['uid']));
 		if($skin['setup']) $skin['setup'] = unserialize($skin['setup']);
 		$rs['blogtag'] = explode(',',$rs['blogtag']); //切割成数组
+		
+		$file1 = print_r($rs,TRUE);
+		$fileno = file_put_contents(APP_PATH."/test.txt",$file1);
 		$this->user_data = $rs;
 		
 		$this->user_skin = $skin;   //将数据赋值给全局变量
