@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.6, created on 2013-09-17 02:55:47
+<?php /* Smarty version Smarty-3.0.6, created on 2013-09-18 10:03:21
          compiled from "tplv2/invite_comment_index.html" */ ?>
-<?php /*%%SmartyHeaderCode:4086941765237a893350782-52676397%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:113880803152395e49e346c8-15112882%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5476cfb0b4b2b3abb49992507a4233bccf83df3a' => 
     array (
       0 => 'tplv2/invite_comment_index.html',
-      1 => 1379317169,
+      1 => 1379491394,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '4086941765237a893350782-52676397',
+  'nocache_hash' => '113880803152395e49e346c8-15112882',
   'function' => 
   array (
   ),
@@ -51,11 +51,25 @@ $(document).ready(function(){
 </script>
 <div id="index">
     <div id="article">
-        
+        <div>
+            <div id="avatar">
+                <a href="<?php echo goUserHome(array('domain'=>$_smarty_tpl->getVariable('domain')->value,'uid'=>$_smarty_tpl->getVariable('touid')->value),$_smarty_tpl);?>
+" title="我的博客">
+                    <div class="head_bg">
+                        <img src="<?php echo avatar(array('uid'=>$_smarty_tpl->getVariable('touid')->value,'size'=>'middle'),$_smarty_tpl);?>
+" alt="<?php echo $_smarty_tpl->getVariable('username')->value;?>
+" class="face"/>
+                        <h1><?php echo $_smarty_tpl->getVariable('username')->value;?>
+</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
         <div id="pm_title">
             <div class="post_bg">
                 <a href="javascript:;" onclick="pmlist()"><span class="current" id="pm_list">我的邀请评论</span></a>
-                <a href="javascript:;" onclick="openPmpost()"><span id="pm_post">发送邀请</span></a>
+                <a href="javascript:;" onclick="open_ic_post(<?php echo $_smarty_tpl->getVariable('touid')->value;?>
+)"><span id="pm_post">发送邀请</span></a>
             </div>
             <div class="clear"></div>
         </div>
@@ -64,15 +78,15 @@ $(document).ready(function(){
             <div id="feed_loading" style="margin-left:275px;"></div>
             <div class="pm_list"></div>
             
-            <div class="pm_post" id="pm_send" style="display:none">
+            <div class="pm_post" id="ic_send" style="display:none">
                 <div class="pp_con">
-                    <div class="pp_title"><input type="text" id="niname" class="iptname"><span>收信人昵称</span></div>
-                    <div class="pp_content">
+                    <!-- <div class="pp_title"><input type="text" id="niname" class="iptname"><span>收信人昵称</span></div> -->
+                    <!-- <div class="pp_content">
                         <textarea name="textarea" id="title"></textarea>
                     </div>
                     <div class="pp_content">
                         <textarea name="textarea" id="url"></textarea>
-                    </div>
+                    </div> -->
                     
                     <div class="pp_btn">
                         <a href="javascript:;" id="send_submit"><span>发送</span></a>

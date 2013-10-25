@@ -455,6 +455,9 @@ class blog extends top
 	//处理feeds给前端显示
 	//$split 是否截断内容
 	private function foramt_feeds(& $d,$split=1){
+		//$file1 = print_r($d,TRUE);
+		//$fileno = file_put_contents(APP_PATH."/test.txt",$file1,FILE_APPEND);
+
 		$d['more'] = 0;
 		$d['h_url'] =  goUserHome(array('uid'=>$d['uid'], 'domain'=>$d['domain']));
 		$d['h_img'] = avatar(array('uid'=>$d['uid'],'size'=>'middle'));
@@ -466,6 +469,8 @@ class blog extends top
 		$d['time_d']  = date('d',$d['time']);
 		$d['time']  = ybtime(array('time'=>$d['time']));
 		$rs         = split_attribute($d['body']); 
+
+
 		$d['attr']  = $rs['attr'];
 		$d['repto'] = $rs['repto'];
 		if(!empty($d['repto'])){
@@ -479,6 +484,8 @@ class blog extends top
 		}else{
 			$d['body'] = strip_tags($rs['body'],'<br><p><embed>');
 		}
+		//$file1 = print_r($d[body],TRUE);
+		//$fileno = file_put_contents(APP_PATH."/test.txt",$file1,FILE_APPEND);
 		if($d['body'] == false){
 			$d['body'] = '';
 		}

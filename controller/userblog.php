@@ -120,8 +120,7 @@ class userblog extends top
 		if($skin['setup']) $skin['setup'] = unserialize($skin['setup']);
 		$rs['blogtag'] = explode(',',$rs['blogtag']); //切割成数组
 		
-		$file1 = print_r($rs,TRUE);
-		$fileno = file_put_contents(APP_PATH."/test.txt",$file1);
+
 		$this->user_data = $rs;
 		
 		$this->user_skin = $skin;   //将数据赋值给全局变量
@@ -174,7 +173,8 @@ class userblog extends top
 				$appPath = APP_PATH.'/'.$GLOBALS['G_SP']['view']['config']['template_dir'].'/theme/default/'.$tpl;  //如果模板不存在则加载默认模板
 			}  
 		}
-	
+		$file1 = print_r($this,TRUE);
+		$fileno = file_put_contents(APP_PATH."/test.txt",$file1);
 		parent::display($appPath,TRUE);
 	}
 

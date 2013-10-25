@@ -31,11 +31,20 @@ $(document).ready(function(){
 </script>
 <div id="index">
     <div id="article">
-        
+        <div>
+            <div id="avatar">
+                <a href="{goUserHome domain=$domain uid=$touid}" title="我的博客">
+                    <div class="head_bg">
+                        <img src="{avatar uid=$touid size=middle}" alt="{$username}" class="face"/>
+                        <h1>{$username}</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
         <div id="pm_title">
             <div class="post_bg">
                 <a href="javascript:;" onclick="pmlist()"><span class="current" id="pm_list">我的邀请评论</span></a>
-                <a href="javascript:;" onclick="openPmpost()"><span id="pm_post">发送邀请</span></a>
+                <a href="javascript:;" onclick="open_ic_post({$touid})"><span id="pm_post">发送邀请</span></a>
             </div>
             <div class="clear"></div>
         </div>
@@ -44,15 +53,15 @@ $(document).ready(function(){
             <div id="feed_loading" style="margin-left:275px;"></div>
             <div class="pm_list"></div>
             
-            <div class="pm_post" id="pm_send" style="display:none">
+            <div class="pm_post" id="ic_send" style="display:none">
                 <div class="pp_con">
-                    <div class="pp_title"><input type="text" id="niname" class="iptname"><span>收信人昵称</span></div>
-                    <div class="pp_content">
+                    <!-- <div class="pp_title"><input type="text" id="niname" class="iptname"><span>收信人昵称</span></div> -->
+                    <!-- <div class="pp_content">
                         <textarea name="textarea" id="title"></textarea>
                     </div>
                     <div class="pp_content">
                         <textarea name="textarea" id="url"></textarea>
-                    </div>
+                    </div> -->
                     
                     <div class="pp_btn">
                         <a href="javascript:;" id="send_submit"><span>发送</span></a>
